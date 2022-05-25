@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSGO</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body style="background: white;">
+    <div class="container">
+        <div class="row">
+            <div class="text-center col-md-3"></div>
+            <div class="text-center col-md-6">
+                <div id="autoLoginForm" style="margin-top: 10%;">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" value=""/>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" value=""/>
+                    </div>
+                    <div class="form-group">
+                        <label for="waitroll">Wait Roll</label>
+                        <input type="number" class="form-control" id="waitroll" value="0"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" id="autoLogin"/>
+                    <label for="autoLogin">Auto login</label>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success" id="reset">Reset</button>
+                    <button class="btn btn-info" id="start">Start</button>
+                    <button class="btn btn-danger" id="stop">Stop</button>
+                </div>
+                <div id="bets">
+                    <div id="bet-current">
+                        <div id="bet-current-detail" style="display: inline-block; font-weight: bold;"></div>
+                        <div id="bet-edit" style="margin-top: 3px; float: right; font-size: 12px;text-decoration: underline; cursor: pointer" data-show="0">Edit Scripts</div>
+                    </div>
+                    <div id="list-bet" style="display: none;">
+                        <textarea name="list-round" id="list-round" rows="10" style="width: 100%; max-width: 100%;"></textarea>
+                        <button class="btn btn-success" id="save-round">Save</button>
+                    </div>
+                </div>
+                <p id="status" class="label-info" style="color: red; font-weight: bold"></p>
+                <table id="logs" class="table" style="overflow-y: auto; max-height: 600px">
+                    
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Insert this line above script imports  -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <!-- normal script imports etc  -->
+    <script src="scripts/jquery.min.js"></script>    
+    <!-- Insert this line after script imports -->
+    <script>if (window.module) module = window.module;</script>
+    <script src="scripts/script.js"></script>    
+</body>
+</html>
